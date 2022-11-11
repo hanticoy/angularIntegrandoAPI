@@ -10,3 +10,10 @@ yarn-error.log
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+
+# Miscellaneous
+/.angular
+
+# System files
+.DS_Store
+Thumbs.db
