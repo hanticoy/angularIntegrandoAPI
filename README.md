@@ -14,6 +14,8 @@ ng generate component "components/pageNotFound"    : para crear una pagina de no
 ng generate component "components/detalleTarea"
 npm install               : para reconstruir el proyecto a partir del package.json
 
+git rm -r myFolder: para eliminar algun elemento que no se debe subir al repo 
+
 # repositorio en GitHub
 - git init NO APLICA
 - si debemos setear:
