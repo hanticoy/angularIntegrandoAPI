@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   urlServiceQueryAll :'http://localhost:5200/queryAll',
-  urlServiceQueryById :'http://localhost:5200/queryById'
+  urlServiceQueryById :'http://localhost:5200/queryById',
+
+  urlBateriaInternaService: 'http://localhost:5200'
 };
 
 /*

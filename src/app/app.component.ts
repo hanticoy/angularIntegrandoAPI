@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpRestFullService } from '../app/services/http-rest-full.service'
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,6 +9,7 @@ import { HttpRestFullService } from '../app/services/http-rest-full.service'
 })
 export class AppComponent implements OnInit {
   title = 'angularApi';
+  Cadena: string = '';
 
   // Establece las tareas de atributo para que sean un array.
   listaTareas: any;
@@ -16,6 +18,8 @@ export class AppComponent implements OnInit {
   constructor(private _httpService: HttpRestFullService) { }
 
   ngOnInit() {
+    this.Cadena = "Mi cadena para Presentar";
+
     this.getTasksFromService();
   }
 
@@ -28,12 +32,12 @@ export class AppComponent implements OnInit {
     });
   }
 
-  getQueryTaskById(){
+  getQueryTaskById() {
     let observable = this._httpService.getQueryById();
     observable.subscribe(data => {
       // console.log("app.component:", data);
       this.Tarea = data;
-     // console.log("app.component tasks:", this.Tarea);
+      // console.log("app.component tasks:", this.Tarea);
     });
   }
 

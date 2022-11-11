@@ -1,18 +1,20 @@
+<main class="contenedor">
+  <head><h1>RestFull Task API</h1></head>
+  <form id="formulario">
+    <article class="linea">
+      <h1>Tareas</h1>
+      <table class="Datos">
+        <tr *ngFor="let item of listaTareas">
+          <td>{{item.title}}</td>
+          <td>{{item.description}}</td>
+          <td>{{item.completed}}</td>
+        </tr>
+      </table>
+    </article>
 
-  Datos de la API
-
-  <table border="1">
-    <tr *ngFor="let item of listaTareas">
-      <td>
-        {{item._id}}
-        <a routerLink="/detalle-tarea" routerLinkActive="active" ariaCurrentWhenActive="page">First Component</a>
-      </td>
-      <td>{{item.title}}</td>
-      <td>{{item.description}}</td>
-      <td>{{item.completed}}</td>
-      </tr>
-  </table>
+  </form>
 
 
-
-
+  <h3>Value of Cadena is: {{Cadena}}</h3>
+  <input type="text" [value]="Cadena" />
+</main>

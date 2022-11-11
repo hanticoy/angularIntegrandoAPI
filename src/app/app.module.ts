@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DetalleTareaComponent } from './components/detalle-tarea/detalle-tarea.component'
 
+import { BateriaInternaService } from './services/bateria-interna.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { DetalleTareaComponent } from './components/detalle-tarea/detalle-tarea.
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [HttpRestFullService],
+  providers: [HttpRestFullService,
+              BateriaInternaService],
+              
   bootstrap: [AppComponent]
 })
 export class AppModule { }
