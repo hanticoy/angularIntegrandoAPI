@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  urlServiceQueryAll :'http://localhost:5200/queryAll',
+  urlServiceQueryById :'http://localhost:5200/queryById'
 };
 
 /*

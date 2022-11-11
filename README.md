@@ -1,4 +1,31 @@
+# Objetivos
+- Generar una aplicación Angular
+- Generar en el router el redireccionamiento basico pagina no encontrada '**' y ruta no existe ''
+- Integrarlo con una API (ejecutar los metodos CRUD que implementa)
+- Usar interfaces
+- Mostrar los datos en la Web (lista de tareas)
+- Ver el detalle de una tarea
+
+# Comandos
+ng generate --help        : para ver todos los tipos de elementos que podemos crear dentro de mi proyecto
+ng new angularApi         : para crear el proyecto
+ng g s http               : para agregar un servicio
+ng generate component "components/pageNotFound"    : para crear una pagina de no encontrado
+ng generate component "components/detalleTarea"
+npm install               : para reconstruir el proyecto a partir del package.json
+
+# repositorio en GitHub
+- git init NO APLICA
+- si debemos setear:
+git remote add origin https://github.com/hanticoy/angularIntegrandoAPI.git
+git branch -M main
+
+# utilizaremos esta API de BackEnd, en archivo environnment.ts
+environment.urlServicetask : https://github.com/hanticoy/RESTful.git
+
+
 # AngularApi
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
 
