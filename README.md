@@ -1,10 +1,25 @@
 # Objetivos
+Tareas RESTful:
 - Generar una aplicación Angular
 - Generar en el router el redireccionamiento basico pagina no encontrada '**' y ruta no existe ''
-- Integrarlo con una API (ejecutar los metodos CRUD que implementa)
-- Usar interfaces
-- Mostrar los datos en la Web (lista de tareas)
-- Ver el detalle de una tarea
+- Utilizar una Interfaz
+- Crear un servicio
+- Registrar el servicio
+- Importar HttpClientModule al proyecto
+- Inyectar HttpClient en el servicio
+- Inyectar el servicio en el componente raíz
+- Escribir las funciones en el servicio que hacen peticiones AJAX para obtener las rutas en la tarea RESTful de API.
+- Invocar cada función que escribiste en el servicio y hacer que console.log registre los datos que recibe
+
+Tareas RESTful continuadas:
+- Hacer que el componente raíz invoque las peticiones al servidor y reciba los datos
+- Hacer que el componente raíz almacene los datos recibidos en sus propios atributos
+- Mostrar los datos recibidos en el HTML
+
+Tareas RESTful interactivas:
+- Agregar un botón para que el usuario active la obtención de todas las tareas
+- Mostrar los datos obtenidos en el HTML
+- Proporcionar un botón para cada tarea para mostrar sus detalles
 
 # Comandos
 ng generate --help        : para ver todos los tipos de elementos que podemos crear dentro de mi proyecto
