@@ -1,20 +1,28 @@
-<main class="contenedor">
-  <head><h1>RestFull Task API</h1></head>
-  <form id="formulario">
-    <article class="linea">
-      <h1>Tareas</h1>
-      <table class="Datos">
-        <tr *ngFor="let item of listaTareas">
-          <td>{{item.title}}</td>
-          <td>{{item.description}}</td>
-          <td>{{item.completed}}</td>
-        </tr>
-      </table>
+<main>
+    <header>
+        <h1 id="titulo">{{title}}  </h1>
+        <button (click)="getTasksFromService()" >Get All Task</button>
+    </header>
+    <br>
+    <br>
+    <article class="Contenido">
+      <h1>{{TituloTareas}}</h1>
+      <section class="tareas" *ngFor="let item of listaTareas">
+          <div class="campos">Titulo:{{item.title}} - Descripción:{{item.description}}</div>
+          <div class="campos">
+                    <button (click)="getQueryTaskById(item._id)">Show Detail</button>
+          </div>
+      </section>
     </article>
 
-  </form>
-
-
-  <h3>Value of Cadena is: {{Cadena}}</h3>
-  <input type="text" [value]="Cadena" />
+    <br>
+    <br>
+    <article class="ContenidoDetalle">
+      <h1>{{TituloDetalle}}</h1>
+      <section class="detalle" *ngFor="let item of Tarea">
+          <div class="campos2">Titulo:{{item.title}}</div>
+          <div class="campos2">Descripción:{{item.description}}</div>
+          <div class="campos2">Estado:{{item.completed}}</div>
+      </section>
+    </article>
 </main>

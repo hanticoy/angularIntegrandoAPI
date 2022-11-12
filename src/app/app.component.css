@@ -1,66 +1,81 @@
 * {
-  margin: 0px auto;
-  align-items: center;
-  padding-top: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0px auto;
 }
 
-head {
-border-bottom: 5px solid black;
+main {
+  width: 80%;
 }
-.contenedor {
-  border: 5px solid blue;
+
+header {
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 200px;
+}
+
+.titulo {
+  font-size: xx-large;
+}
+
+.Contenido {
+  /* border: 2px solid green; */
   border-radius: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
-  width: 50%;
 }
 
-.linea {
+.ContenidoDetalle {
+  /* border: 2px solid green; */
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
 }
 
-.lineabtn {
-  display: flex;
+.tareas{
+  /* border: 2px solid red; */
+  display:flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
   width: 80%;
-  padding-bottom: 20px;
+}
+.detalle{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
-.Datos {
-  padding: 20px;
-  width: 90%;
+.campos{
+  display:flex;
+  flex: 2;
+  margin:10px;
 }
 
-.campo {
-  width: 480px;
+.campos2{
+  display:flex;
+  flex: 2;
+  margin:10px;
 }
-
-.titulo {
-  color: dimgray;
-}
-.detail {
-  color: blue;
-  text-align: right;
-}
-
 /* Button */
 .button, button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 8px 16px;
-  border-radius: 2px;
+  border-radius: 25px;
   font-size: 20px;
   cursor: pointer;
   background-color: #1976d2;
@@ -78,12 +93,6 @@ border-bottom: 5px solid black;
 .button:disabled, button:disabled {
   opacity: 0.5;
   cursor: auto;
-}
-
-.editar{
-  width: 30px;
-  height: 30px;
-  cursor: hand;
 }
 a {
   cursor: pointer;
