@@ -21,6 +21,11 @@ Tareas RESTful interactivas:
 - Mostrar los datos obtenidos en el HTML
 - Proporcionar un botón para cada tarea para mostrar sus detalles
 
+Tareas RESTful de CRUD
+- Crear una aplicación CRUD completa con Angular, Express, Node y MongoDB.
+- Incorporar los formularios para permitirle al usuario publicar datos
+
+
 # Comandos
 ng generate --help        : para ver todos los tipos de elementos que podemos crear dentro de mi proyecto
 ng new angularApi         : para crear el proyecto

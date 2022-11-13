@@ -22,5 +22,18 @@ export class HttpRestFullService {
     //aqui la intefaz queryBiId define la salida de la API como un estandar requerido para la RESPUESTA, si esta cambiara debiera dar un error
     return this._http.get<queryById>(url);
   }
+  addTask(newTask:any){
+    return this._http.post(environment.urlServiceNew,newTask);
+  }
+  updateTask(editTask:any){
+    // console.log('service:' + editTask);
+
+    return this._http.put(environment.urlServiceUpdate,editTask);
+  }
+
+  deleteTask(id:String){
+    let url= `${environment.urlServiceDelete}/${id}`;
+    return this._http.delete(url);
+  }
 }
 

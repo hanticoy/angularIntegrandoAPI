@@ -2,6 +2,21 @@
     <header>
         <h1 id="titulo">{{title}}  </h1>
         <button (click)="getTasksFromService()" >Get All Task</button>
+
+        <form (submit)="onNewTask()">
+            <article class="ContenidoDetalle">
+                <h1>Ingrese una Nueva Tarea</h1>
+                <section class="CamposForm">
+                    <div class="campos2">Titulo:<input type="text" name="newTask.title" [(ngModel)]="newTask.title"></div>
+                    <div class="campos2">Descripción:<input type="text" name="newTask.description"  [(ngModel)]="newTask.description"></div>
+                    <div class="campos2">Estado:<input type="text" name="newTask.completed"  [(ngModel)]="newTask.completed"></div>
+                    <!-- <p>{{newTask | json}}</p> -->
+                    <div><input class="button" type="submit" value="Crear Tarea"></div>
+                </section>
+
+            </article>
+        </form>
+
     </header>
     <br>
     <br>
@@ -10,19 +25,25 @@
       <section class="tareas" *ngFor="let item of listaTareas">
           <div class="campos">Titulo:{{item.title}} - Descripción:{{item.description}}</div>
           <div class="campos">
-                    <button (click)="getQueryTaskById(item._id)">Show Detail</button>
+                    <button (click)="getQueryTask(item._id)">Show</button>
+                    <button (click)="onDeleteTask(item._id)">Delete</button>
           </div>
       </section>
     </article>
 
     <br>
     <br>
-    <article class="ContenidoDetalle">
-      <h1>{{TituloDetalle}}</h1>
-      <section class="detalle" *ngFor="let item of Tarea">
-          <div class="campos2">Titulo:{{item.title}}</div>
-          <div class="campos2">Descripción:{{item.description}}</div>
-          <div class="campos2">Estado:{{item.completed}}</div>
-      </section>
-    </article>
+    <form (submit)="onEditTask()">
+      <article class="ContenidoDetalle">
+          <h1>Detalle de Tarea</h1>
+          <section class="CamposForm">
+              <div class="campos2">Titulo:<input type="text" name="qryTask.title" value="{{qryTask[0].title}}" [(ngModel)]="qryTask[0].title"></div>
+              <div class="campos2">Descripción:<input type="text" name="qryTask.description" value="{{qryTask[0].description}}" [(ngModel)]="qryTask[0].description"></div>
+              <div class="campos2">Estado:<input type="text" name="qryTask.completed" value="{{qryTask[0].completed}}" [(ngModel)]="qryTask[0].completed"></div>
+              <!-- <p>{{qryTask | json}}</p> -->
+              <div><input class="button" type="submit" value="Editar"></div>
+          </section>
+      </article>
+    </form>
+
 </main>

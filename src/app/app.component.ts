@@ -15,7 +15,9 @@ export class AppComponent implements OnInit {
 
   // Establece las tareas de atributo para que sean un array.
   listaTareas: any;
-  Tarea: any;
+  newTask: any;
+  qryTask: any;
+  editTask:any;
 
   constructor(private _httpService: HttpRestFullService) { }
 
@@ -34,29 +36,58 @@ export class AppComponent implements OnInit {
   //   console.log(`Click event is working with event: ${event}`);
   // }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.newTask = { title: "", description: "", completed: true };
+    this.qryTask = [{ title: "", description: "", completed: true }];
+    this.editTask = [{ title: "", description: "", completed: true }];
 
-  getTasksFromService() {
-      let observable = this._httpService.getTasks();
-      observable.subscribe(data => {
-        // console.log("app.component:", data);
-        this.listaTareas = data;
-        //console.log("app.component tasks:", this.listaTareas);
-      });
-
-      this.TituloTareas='Tareas Agendadas';
+    // this.newTask = {title : "Lectura de formularios", description:"Aprendiendo Angular", completed: true};
   }
 
-  getQueryTaskById(id:string) {
+  onNewTask() {
+    let observable = this._httpService.addTask(this.newTask);
+    observable.subscribe(data => {
+      this.getTasksFromService();
+    });
+  }
+
+  onEditTask() {
+    this.editTask = this.qryTask[0];
+
+    let observable = this._httpService.updateTask(this.editTask);
+    observable.subscribe(data => {
+      // console.log("resultado:", data);
+      this.getTasksFromService();
+    });
+  }
+
+  getQueryTask(id: string) {
     let observable = this._httpService.getQueryById(id);
     observable.subscribe(data => {
-      // console.log("app.component:", data);
-      this.Tarea = data;
-      console.log("app.component tasks:", this.Tarea);
+      this.qryTask = data;
+      // console.log("consulta id:", this.qryTask);
     });
-
-    this.TituloDetalle='Detalle de Tarea';
   }
+
+  getTasksFromService() {
+    let observable = this._httpService.getTasks();
+    observable.subscribe(data => {
+      // console.log("app.component:", data);
+      this.listaTareas = data;
+      //console.log("app.component tasks:", this.listaTareas);
+    });
+    this.TituloTareas = 'Tareas Agendadas';
+  }
+
+
+  onDeleteTask(id: string) {
+    let observable = this._httpService.deleteTask(id);
+    observable.subscribe(data => {
+      //console.log("app.component tasks:", data);
+      this.getTasksFromService();
+    });
+  }
+
 
 }
 

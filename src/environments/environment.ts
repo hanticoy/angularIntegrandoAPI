@@ -6,8 +6,11 @@ export const environment = {
   production: false,
   urlServiceQueryAll :'http://localhost:5200/queryAll',
   urlServiceQueryById :'http://localhost:5200/queryById',
+  urlServiceNew :'http://localhost:5200/new',
+  urlServiceUpdate :'http://localhost:5200/update',
+  urlServiceDelete:'http://localhost:5200/delete'
 
-  urlBateriaInternaService: 'http://localhost:5200'
+
 };
 
 /*

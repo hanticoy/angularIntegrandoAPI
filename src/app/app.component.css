@@ -14,7 +14,7 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
-  height: 200px;
+  height: 300px;
 }
 
 .titulo {
@@ -41,6 +41,15 @@ header {
   flex-wrap: nowrap;
 }
 
+.ContenidoForm {
+  /* border: 2px solid green; */
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 .tareas{
   /* border: 2px solid red; */
   display:flex;
@@ -50,9 +59,18 @@ header {
   flex-wrap: nowrap;
   width: 80%;
 }
+
 .detalle{
   display:flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.CamposForm {
+  display:flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
@@ -82,7 +100,6 @@ header {
   color: white;
   border: none;
   height: 50px;
-  width: 200px;
 }
 
 .button:hover, button:hover {
