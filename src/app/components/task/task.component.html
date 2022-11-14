@@ -1,0 +1,18 @@
+<br><br>
+<article class="marco">
+  <h3>componente incrustado</h3>
+  <form (submit)="onEditTask()">
+    <article class="ContenidoDetalle">
+      <h1>Detalle de Tarea</h1>
+      <section class="CamposForm">
+        <div class="campos2">Titulo:<input type="text" name="taskToShow.title" value="{{taskToShow.title}}"
+            [(ngModel)]="taskToShow.title"></div>
+        <div class="campos2">Descripción:<input type="text" name="taskToShow.description"
+            value="{{taskToShow.description}}" [(ngModel)]="taskToShow.description"></div>
+        <div class="campos2">Estado:<input type="text" name="taskToShow.completed" value="{{taskToShow.completed}}"
+            [(ngModel)]="taskToShow.completed"></div>
+        <div><input class="button" type="submit" value="Guardar Cambios"></div>
+      </section>
+    </article>
+  </form>
+</article>

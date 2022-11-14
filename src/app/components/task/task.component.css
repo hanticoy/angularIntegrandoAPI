@@ -1,0 +1,62 @@
+.marco{
+  border:5px solid blue;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.ContenidoDetalle {
+  /* border: 2px solid green; */
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.CamposForm {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.campos2{
+  display:flex;
+  flex: 2;
+  margin:10px;
+}
+
+/* Button */
+.button, button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  height: 50px;
+}
+
+.button:hover, button:hover {
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.button:disabled, button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+a {
+  cursor: pointer;
+  color: #1976d2;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.8;
+}

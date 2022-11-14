@@ -25,6 +25,8 @@ Tareas RESTful de CRUD
 - Crear una aplicación CRUD completa con Angular, Express, Node y MongoDB.
 - Incorporar los formularios para permitirle al usuario publicar datos
 
+# Componentes
+- ng generate component conponents/Task            : Generar un componente llamado Task en la carpeta "components"
 
 # Comandos
 ng generate --help        : para ver todos los tipos de elementos que podemos crear dentro de mi proyecto
@@ -33,7 +35,7 @@ ng g s http               : para agregar un servicio
 ng generate component "components/pageNotFound"    : para crear una pagina de no encontrado
 ng generate component "components/detalleTarea"
 npm install               : para reconstruir el proyecto a partir del package.json
-
+<p>{{qryTask | json}}</p> : para poder visualizar los cambios de un objeto en forma inmediata
 git rm -r myFolder: para eliminar algun elemento que no se debe subir al repo 
 
 # repositorio en GitHub

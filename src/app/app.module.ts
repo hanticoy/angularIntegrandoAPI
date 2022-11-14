@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HttpRestFullService } from '../app/services/http-rest-full.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { DetalleTareaComponent } from './components/detalle-tarea/detalle-tarea.component'
+import { DetalleTareaComponent } from './components/detalle-tarea/detalle-tarea.component';
+import { TaskComponent } from './components/task/task.component';
+import { NewTaskComponent } from './components/new-task/new-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    DetalleTareaComponent
+    DetalleTareaComponent,
+    TaskComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,

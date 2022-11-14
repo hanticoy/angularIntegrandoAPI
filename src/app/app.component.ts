@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   newTask: any;
   qryTask: any;
   editTask:any;
+  selectedTask:any;
 
   constructor(private _httpService: HttpRestFullService) { }
 
@@ -67,6 +68,10 @@ export class AppComponent implements OnInit {
       this.qryTask = data;
       // console.log("consulta id:", this.qryTask);
     });
+  }
+  showTask(task:any){
+    // console.log('tarea enviada:' + task.title);
+    this.selectedTask = task;
   }
 
   getTasksFromService() {
