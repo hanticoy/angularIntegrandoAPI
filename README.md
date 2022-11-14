@@ -25,6 +25,9 @@ Tareas RESTful de CRUD
 - Crear una aplicación CRUD completa con Angular, Express, Node y MongoDB.
 - Incorporar los formularios para permitirle al usuario publicar datos
 
+ Tareas RESTful con componentes anidados
+ - Usar un componente anidado en la asignación de tareas RESTful interactivas
+
 # Componentes
 - ng generate component conponents/Task            : Generar un componente llamado Task en la carpeta "components"
 
